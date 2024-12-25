@@ -50,15 +50,12 @@ plt.xlabel('X')
 plt.ylabel('Y')
 plt.grid(True)
 
-
 # Fitting logistic regression (using Iris dataset as an example)
 iris = load_iris()
 X_iris = iris.data[:, :2] # Using only the first two features for simplicity
 y_iris = iris.target
 log_reg = LogisticRegression()
 log_reg.fit(X_iris, y_iris)
-
-
 # Generating a meshgrid for decision boundary visualization
 x_min, x_max = X_iris[:, 0].min() - 1, X_iris[:, 0].max() + 1
 y_min, y_max = X_iris[:, 1].min() - 1, X_iris[:, 1].max() + 1
